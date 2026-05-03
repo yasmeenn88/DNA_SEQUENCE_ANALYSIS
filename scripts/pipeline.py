@@ -1,7 +1,13 @@
-#!/usr/bin/env python3
 """
 Variant Detection Pipeline - Core Module
 Runs: minimap2 -> SAMtools -> BCFtools
+
+this code for the following steps :
+- prepare reference genome
+- reads alignment (FASTAQ)
+- run specified tools
+- variants extraction
+
 """
 
 import subprocess
@@ -10,9 +16,8 @@ import sys
 
 def run_command(cmd, step_name):
     """Run a shell command and exit if it fails"""
-    print(f"\n{'=' * 55}")
     print(f"[{step_name}]")
-    print(f"{'=' * 55}")
+    print(f"{'-' * 55}")
 
     result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
 
@@ -40,13 +45,12 @@ def run_pipeline(reference, fastq1, fastq2, output_prefix, vcf_output):
     - vcf_output: Final VCF output path
     """
 
-    print("\n" + "=" * 55)
+    print("\n" + "-" * 55)
     print("VARIANT DETECTION PIPELINE")
-    print("=" * 55)
     print(f"Reference: {reference}")
     print(f"Reads: {fastq1} + {fastq2}")
     print(f"Output: {vcf_output}")
-    print("=" * 55)
+    print("-" * 55)
 
     # Step 1: Index reference
     run_command(f"minimap2 -d {reference}.mmi {reference}", "1/6 - Indexing Reference Genome")
@@ -87,8 +91,8 @@ def run_pipeline(reference, fastq1, fastq2, output_prefix, vcf_output):
     result = subprocess.run(count_cmd, shell=True, capture_output=True, text=True)
     variant_count = result.stdout.strip()
 
-    print(f"\n{'=' * 55}")
+    print(f"\n{'-' * 55}")
     print(f"PIPELINE COMPLETE!")
     print(f"Total Variants Found: {variant_count}")
     print(f"VCF File: {vcf_output}")
-    print(f"{'=' * 55}\n")
+    print(f"{'-' * 55}\n")
