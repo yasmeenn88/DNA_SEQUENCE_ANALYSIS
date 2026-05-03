@@ -39,7 +39,7 @@ def generate_txt_report(variants, output_dir, sample_name):
 
     with open(output_file, 'w', encoding='utf-8') as f:
         f.write("=" * 60 + "\n")
-        f.write(f"  🧬 VARIANT DETECTION REPORT\n")
+        f.write(f"  VARIANT DETECTION REPORT\n")
         f.write("=" * 60 + "\n\n")
         f.write(f"Sample Name:     {sample_name}\n")
         f.write(f"Reference:       Chromosome 17 (hg38)\n")
@@ -88,7 +88,7 @@ def generate_txt_report(variants, output_dir, sample_name):
         f.write("  End of Report\n")
         f.write("=" * 60 + "\n")
 
-    print(f"   📄 TXT Report: {output_file}")
+    print(f"   TXT Report: {output_file}")
     return output_file
 
 
@@ -128,7 +128,7 @@ def generate_html_report(variants, output_dir, sample_name):
 </head>
 <body>
     <div class="header">
-        <h1>🧬 Variant Detection Report</h1>
+        <h1>Variant Detection Report</h1>
         <p><strong>Sample:</strong> {sample_name} | <strong>Reference:</strong> Chromosome 17 (hg38) | <strong>Generated:</strong> {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}</p>
     </div>
 
@@ -151,7 +151,7 @@ def generate_html_report(variants, output_dir, sample_name):
         </div>
     </div>
 
-    <h2>📋 Top 20 Variants</h2>
+    <h2>Top 20 Variants</h2>
     <table>
         <tr>
             <th>#</th>
@@ -189,7 +189,7 @@ def generate_html_report(variants, output_dir, sample_name):
     with open(output_file, 'w', encoding='utf-8') as f:
         f.write(html)
 
-    print(f"   📄 HTML Report: {output_file}")
+    print(f"   HTML Report: {output_file}")
     return output_file
 
 
@@ -203,17 +203,17 @@ def generate_reports(vcf_file, output_dir, sample_name):
     - sample_name: Sample name for report titles
     """
     print(f"\n{'=' * 55}")
-    print("📝 GENERATING REPORTS")
+    print("GENERATING REPORTS")
     print(f"{'=' * 55}")
 
     variants = parse_vcf(vcf_file)
 
-    print(f"\n📊 {len(variants)} variants loaded from VCF\n")
+    print(f"\n{len(variants)} variants loaded from VCF\n")
 
     # Generate reports
     txt_file = generate_txt_report(variants, output_dir, sample_name)
     html_file = generate_html_report(variants, output_dir, sample_name)
 
-    print(f"\n✅ Reports generated successfully!")
+    print(f"\nReports generated successfully!")
 
     return txt_file, html_file

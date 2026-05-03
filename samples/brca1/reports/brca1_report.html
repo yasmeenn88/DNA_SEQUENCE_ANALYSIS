@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>brca1 - Variant Report</title>
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 30px; background: #f8f9fa; color: #2c3e50; }
+        .header { background: linear-gradient(135deg, #2c3e50, #3498db); color: white; padding: 25px; border-radius: 10px; margin-bottom: 25px; }
+        .header h1 { margin: 0; font-size: 26px; }
+        .header p { margin: 5px 0 0 0; opacity: 0.9; }
+        .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin-bottom: 25px; }
+        .stat-card { background: white; padding: 18px; border-radius: 8px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .stat-card .number { font-size: 30px; font-weight: bold; color: #3498db; }
+        .stat-card .label { font-size: 13px; color: #7f8c8d; margin-top: 5px; }
+        table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        th { background: #2c3e50; color: white; padding: 12px; text-align: left; }
+        td { padding: 10px 12px; border-bottom: 1px solid #ecf0f1; }
+        tr:hover { background: #f8f9fa; }
+        .footer { text-align: center; margin-top: 25px; color: #95a5a6; font-size: 13px; }
+        .badge { padding: 3px 8px; border-radius: 4px; font-size: 11px; font-weight: bold; }
+        .badge-snp { background: #3498db; color: white; }
+        .badge-indel { background: #e74c3c; color: white; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Variant Detection Report</h1>
+        <p><strong>Sample:</strong> brca1 | <strong>Reference:</strong> Chromosome 17 (hg38) | <strong>Generated:</strong> 2026-05-03 22:14:24</p>
+    </div>
+
+    <div class="stats">
+        <div class="stat-card">
+            <div class="number">37</div>
+            <div class="label">Total Variants</div>
+        </div>
+        <div class="stat-card">
+            <div class="number">23</div>
+            <div class="label">SNPs</div>
+        </div>
+        <div class="stat-card">
+            <div class="number">14</div>
+            <div class="label">INDELs</div>
+        </div>
+        <div class="stat-card">
+            <div class="number">33</div>
+            <div class="label">High Quality (>200)</div>
+        </div>
+    </div>
+
+    <h2>Top 20 Variants</h2>
+    <table>
+        <tr>
+            <th>#</th>
+            <th>Position</th>
+            <th>Reference</th>
+            <th>Variant</th>
+            <th>Quality</th>
+            <th>Type</th>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>chr17:41246355</td>
+            <td>G</td>
+            <td><strong>C</strong></td>
+            <td>228.42</td>
+            <td><span class="badge badge-snp">SNP</span></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>chr17:41246187</td>
+            <td>C</td>
+            <td><strong>T</strong></td>
+            <td>228.42</td>
+            <td><span class="badge badge-snp">SNP</span></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>chr17:41228617</td>
+            <td>G</td>
+            <td><strong>A</strong></td>
+            <td>228.42</td>
+            <td><span class="badge badge-snp">SNP</span></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>chr17:41234574</td>
+            <td>G</td>
+            <td><strong>A</strong></td>
+            <td>228.41</td>
+            <td><span class="badge badge-snp">SNP</span></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>chr17:41244369</td>
+            <td>T</td>
+            <td><strong>G</strong></td>
+            <td>228.41</td>
+            <td><span class="badge badge-snp">SNP</span></td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>chr17:41243575</td>
+            <td>TC</td>
+            <td><strong>T</strong></td>
+            <td>228.36</td>
+            <td><span class="badge badge-indel">INDEL</span></td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>chr17:41252646</td>
+            <td>atgtt</td>
+            <td><strong>at</strong></td>
+            <td>228.36</td>
+            <td><span class="badge badge-indel">INDEL</span></td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>chr17:41243615</td>
+            <td>GTTT</td>
+            <td><strong>GTT</strong></td>
+            <td>228.33</td>
+            <td><span class="badge badge-indel">INDEL</span></td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>chr17:41244986</td>
+            <td>AGC</td>
+            <td><strong>AGCGC</strong></td>
+            <td>228.32</td>
+            <td><span class="badge badge-indel">INDEL</span></td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>chr17:41244213</td>
+            <td>TCTTGCTT</td>
+            <td><strong>TCTT</strong></td>
+            <td>228.31</td>
+            <td><span class="badge badge-indel">INDEL</span></td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>chr17:41244366</td>
+            <td>ATTT</td>
+            <td><strong>ATT</strong></td>
+            <td>228.30</td>
+            <td><span class="badge badge-indel">INDEL</span></td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>chr17:41243834</td>
+            <td>AGGTATATTG</td>
+            <td><strong>AG</strong></td>
+            <td>228.28</td>
+            <td><span class="badge badge-indel">INDEL</span></td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td>chr17:41234477</td>
+            <td>CTT</td>
+            <td><strong>CTTT</strong></td>
+            <td>228.24</td>
+            <td><span class="badge badge-indel">INDEL</span></td>
+        </tr>
+        <tr>
+            <td>14</td>
+            <td>chr17:41241568</td>
+            <td>t</td>
+            <td><strong>tC</strong></td>
+            <td>228.15</td>
+            <td><span class="badge badge-indel">INDEL</span></td>
+        </tr>
+        <tr>
+            <td>15</td>
+            <td>chr17:41246455</td>
+            <td>TAGGATTCTCTGAG</td>
+            <td><strong>TAG</strong></td>
+            <td>228.13</td>
+            <td><span class="badge badge-indel">INDEL</span></td>
+        </tr>
+        <tr>
+            <td>16</td>
+            <td>chr17:41266091</td>
+            <td>caaaaaaaaaaaaa</td>
+            <td><strong>cAaaaaaaaaaaaaa</strong></td>
+            <td>228.13</td>
+            <td><span class="badge badge-indel">INDEL</span></td>
+        </tr>
+        <tr>
+            <td>17</td>
+            <td>chr17:41250379</td>
+            <td>aattattatt</td>
+            <td><strong>aattatt</strong></td>
+            <td>228.12</td>
+            <td><span class="badge badge-indel">INDEL</span></td>
+        </tr>
+        <tr>
+            <td>18</td>
+            <td>chr17:41245815</td>
+            <td>G</td>
+            <td><strong>T</strong></td>
+            <td>225.42</td>
+            <td><span class="badge badge-snp">SNP</span></td>
+        </tr>
+        <tr>
+            <td>19</td>
+            <td>chr17:41248006</td>
+            <td>C</td>
+            <td><strong>A</strong></td>
+            <td>225.42</td>
+            <td><span class="badge badge-snp">SNP</span></td>
+        </tr>
+        <tr>
+            <td>20</td>
+            <td>chr17:41252697</td>
+            <td>T</td>
+            <td><strong>A</strong></td>
+            <td>225.42</td>
+            <td><span class="badge badge-snp">SNP</span></td>
+        </tr>
+    </table>
+
+    <div class="footer">
+        <p>Generated by DNA Sequencing Variant Detection Pipeline</p>
+    </div>
+</body>
+</html>

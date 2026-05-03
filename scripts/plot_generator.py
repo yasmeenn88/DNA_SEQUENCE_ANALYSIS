@@ -47,7 +47,7 @@ def manhattan_plot(vcf_file, output_dir, sample_name):
     positions, qualities, types, _, _ = parse_vcf(vcf_file)
 
     if not positions:
-        print("   ⚠️ No variants found for Manhattan plot")
+        print("   No variants found for Manhattan plot")
         return
 
     fig, ax = plt.subplots(figsize=(14, 6))
@@ -85,7 +85,7 @@ def manhattan_plot(vcf_file, output_dir, sample_name):
     plt.savefig(output_file, dpi=200, bbox_inches='tight')
     plt.close()
 
-    print(f"   📈 Manhattan Plot: {output_file}")
+    print(f"   Manhattan Plot: {output_file}")
 
 
 def mutation_heatmap(vcf_file, output_dir, sample_name):
@@ -93,7 +93,7 @@ def mutation_heatmap(vcf_file, output_dir, sample_name):
     positions, qualities, types, ref_bases, alt_bases = parse_vcf(vcf_file)
 
     if not positions:
-        print("   ⚠️ No variants found for Heatmap")
+        print("   No variants found for Heatmap")
         return
 
     fig, axes = plt.subplots(3, 1, figsize=(14, 10),
@@ -169,7 +169,7 @@ def mutation_heatmap(vcf_file, output_dir, sample_name):
     plt.savefig(output_file, dpi=200, bbox_inches='tight')
     plt.close()
 
-    print(f"   📈 Heatmap: {output_file}")
+    print(f"   Heatmap: {output_file}")
 
 
 def circos_plot(vcf_file, output_dir, sample_name):
@@ -177,7 +177,7 @@ def circos_plot(vcf_file, output_dir, sample_name):
     positions, qualities, types, _, _ = parse_vcf(vcf_file)
 
     if not positions:
-        print("   ⚠️ No variants found for Circos plot")
+        print("   No variants found for Circos plot")
         return
 
     chr17_size = 83257441  # Chromosome 17 size in bp
@@ -226,7 +226,7 @@ def circos_plot(vcf_file, output_dir, sample_name):
     plt.savefig(output_file, dpi=200, bbox_inches='tight')
     plt.close()
 
-    print(f"   📈 Circos Plot: {output_file}")
+    print(f"   Circos Plot: {output_file}")
 
 
 def generate_plots(vcf_file, output_dir, sample_name):
@@ -239,11 +239,11 @@ def generate_plots(vcf_file, output_dir, sample_name):
     - sample_name: Sample name for titles
     """
     print(f"\n{'=' * 55}")
-    print("📈 GENERATING PLOTS")
+    print("GENERATING PLOTS")
     print(f"{'=' * 55}\n")
 
     manhattan_plot(vcf_file, output_dir, sample_name)
     mutation_heatmap(vcf_file, output_dir, sample_name)
     circos_plot(vcf_file, output_dir, sample_name)
 
-    print(f"\n✅ All plots generated in: {output_dir}")
+    print(f"\nAll plots generated in: {output_dir}")

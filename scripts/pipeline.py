@@ -1,18 +1,11 @@
 #!/usr/bin/env python3
 """
 Variant Detection Pipeline - Core Module
-Runs: BWA -> SAMtools -> BCFtools
-Uses WSL for Linux commands when running on Windows
+Runs: minimap2 -> SAMtools -> BCFtools
 """
 
 import subprocess
 import sys
-import platform
-
-
-def is_windows():
-    """Check if running on Windows"""
-    return platform.system() == "Windows"
 
 
 def run_command(cmd, step_name):
@@ -20,10 +13,6 @@ def run_command(cmd, step_name):
     print(f"\n{'=' * 55}")
     print(f"[{step_name}]")
     print(f"{'=' * 55}")
-
-    # If on Windows, run command through WSL
-    if is_windows():
-        cmd = f"wsl {cmd}"
 
     result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
 
@@ -51,15 +40,6 @@ def run_pipeline(reference, fastq1, fastq2, output_prefix, vcf_output):
     - vcf_output: Final VCF output path
     """
 
-    # Convert Windows paths to WSL paths if needed
-    if is_windows():
-        # Convert backslashes to forward slashes
-        reference = reference.replace("\\", "/")
-        fastq1 = fastq1.replace("\\", "/")
-        fastq2 = fastq2.replace("\\", "/")
-        output_prefix = output_prefix.replace("\\", "/")
-        vcf_output = vcf_output.replace("\\", "/")
-
     print("\n" + "=" * 55)
     print("VARIANT DETECTION PIPELINE")
     print("=" * 55)
@@ -69,12 +49,12 @@ def run_pipeline(reference, fastq1, fastq2, output_prefix, vcf_output):
     print("=" * 55)
 
     # Step 1: Index reference
-    run_command(f"bwa index {reference}", "1/6 - Indexing Reference Genome")
+    run_command(f"minimap2 -d {reference}.mmi {reference}", "1/6 - Indexing Reference Genome")
 
     # Step 2: Alignment
     run_command(
-        f"bwa mem {reference} {fastq1} {fastq2} > {output_prefix}_aligned.sam",
-        "2/6 - Sequence Alignment (BWA MEM)"
+        f"minimap2 -ax sr {reference} {fastq1} {fastq2} > {output_prefix}_aligned.sam",
+        "2/6 - Sequence Alignment (minimap2)"
     )
 
     # Step 3: SAM to BAM
@@ -102,10 +82,7 @@ def run_pipeline(reference, fastq1, fastq2, output_prefix, vcf_output):
     )
 
     # Quick summary
-    if is_windows():
-        count_cmd = f"wsl grep -v '^#' {vcf_output} | wc -l"
-    else:
-        count_cmd = f"grep -v '^#' {vcf_output} | wc -l"
+    count_cmd = f"grep -v '^#' {vcf_output} | wc -l"
 
     result = subprocess.run(count_cmd, shell=True, capture_output=True, text=True)
     variant_count = result.stdout.strip()

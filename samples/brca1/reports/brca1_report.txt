@@ -1,0 +1,123 @@
+============================================================
+  VARIANT DETECTION REPORT
+============================================================
+
+Sample Name:     brca1
+Reference:       Chromosome 17 (hg38)
+Generated:       2026-05-03 22:14:24
+VCF Source:      brca1_variants.vcf
+
+------------------------------------------------------------
+  SUMMARY STATISTICS
+------------------------------------------------------------
+  Total Variants Detected:    37
+    - SNPs:                    23
+    - INDELs:                  14
+    - High Quality (>200):     33
+    - Low Quality (≤200):      4
+
+------------------------------------------------------------
+  QUALITY DISTRIBUTION
+------------------------------------------------------------
+  Excellent (≥225):   32
+  Good (200-224):     1
+  Moderate (100-199): 0
+  Low (<100):         4
+
+------------------------------------------------------------
+  TOP 15 VARIANTS
+------------------------------------------------------------
+
+  #1
+    Position:    chr17:41246355
+    Change:      G → C
+    Quality:     228.42
+    Type:        SNP
+
+  #2
+    Position:    chr17:41246187
+    Change:      C → T
+    Quality:     228.42
+    Type:        SNP
+
+  #3
+    Position:    chr17:41228617
+    Change:      G → A
+    Quality:     228.42
+    Type:        SNP
+
+  #4
+    Position:    chr17:41234574
+    Change:      G → A
+    Quality:     228.41
+    Type:        SNP
+
+  #5
+    Position:    chr17:41244369
+    Change:      T → G
+    Quality:     228.41
+    Type:        SNP
+
+  #6
+    Position:    chr17:41243575
+    Change:      TC → T
+    Quality:     228.36
+    Type:        INDEL
+
+  #7
+    Position:    chr17:41252646
+    Change:      atgtt → at
+    Quality:     228.36
+    Type:        INDEL
+
+  #8
+    Position:    chr17:41243615
+    Change:      GTTT → GTT
+    Quality:     228.33
+    Type:        INDEL
+
+  #9
+    Position:    chr17:41244986
+    Change:      AGC → AGCGC
+    Quality:     228.32
+    Type:        INDEL
+
+  #10
+    Position:    chr17:41244213
+    Change:      TCTTGCTT → TCTT
+    Quality:     228.31
+    Type:        INDEL
+
+  #11
+    Position:    chr17:41244366
+    Change:      ATTT → ATT
+    Quality:     228.30
+    Type:        INDEL
+
+  #12
+    Position:    chr17:41243834
+    Change:      AGGTATATTG → AG
+    Quality:     228.28
+    Type:        INDEL
+
+  #13
+    Position:    chr17:41234477
+    Change:      CTT → CTTT
+    Quality:     228.24
+    Type:        INDEL
+
+  #14
+    Position:    chr17:41241568
+    Change:      t → tC
+    Quality:     228.15
+    Type:        INDEL
+
+  #15
+    Position:    chr17:41246455
+    Change:      TAGGATTCTCTGAG → TAG
+    Quality:     228.13
+    Type:        INDEL
+
+============================================================
+  End of Report
+============================================================

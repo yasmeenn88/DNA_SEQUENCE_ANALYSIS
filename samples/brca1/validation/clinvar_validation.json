@@ -1,0 +1,222 @@
+[
+  {
+    "chrom": "chr17",
+    "pos": 41196309,
+    "ref": "T",
+    "alt": "G",
+    "qual": 5.75677,
+    "type": "SNP",
+    "in_clinvar": false,
+    "clinvar_id": null,
+    "clinical_significance": "Not in ClinVar"
+  },
+  {
+    "chrom": "chr17",
+    "pos": 41209068,
+    "ref": "C",
+    "alt": "T",
+    "qual": 225.417,
+    "type": "SNP",
+    "in_clinvar": false,
+    "clinvar_id": null,
+    "clinical_significance": "Not in ClinVar"
+  },
+  {
+    "chrom": "chr17",
+    "pos": 41228617,
+    "ref": "G",
+    "alt": "A",
+    "qual": 228.422,
+    "type": "SNP",
+    "in_clinvar": false,
+    "clinvar_id": null,
+    "clinical_significance": "Not in ClinVar"
+  },
+  {
+    "chrom": "chr17",
+    "pos": 41234404,
+    "ref": "T",
+    "alt": "C",
+    "qual": 225.417,
+    "type": "SNP",
+    "in_clinvar": false,
+    "clinvar_id": null,
+    "clinical_significance": "Not in ClinVar"
+  },
+  {
+    "chrom": "chr17",
+    "pos": 41234477,
+    "ref": "CTT",
+    "alt": "CTTT",
+    "qual": 228.24,
+    "type": "INDEL",
+    "in_clinvar": false,
+    "clinvar_id": null,
+    "clinical_significance": "Not in ClinVar"
+  },
+  {
+    "chrom": "chr17",
+    "pos": 41234574,
+    "ref": "G",
+    "alt": "A",
+    "qual": 228.415,
+    "type": "SNP",
+    "in_clinvar": false,
+    "clinvar_id": null,
+    "clinical_significance": "Not in ClinVar"
+  },
+  {
+    "chrom": "chr17",
+    "pos": 41239491,
+    "ref": "T",
+    "alt": "C",
+    "qual": 225.417,
+    "type": "SNP",
+    "in_clinvar": false,
+    "clinvar_id": null,
+    "clinical_significance": "Not in ClinVar"
+  },
+  {
+    "chrom": "chr17",
+    "pos": 41240750,
+    "ref": "G",
+    "alt": "A",
+    "qual": 225.417,
+    "type": "SNP",
+    "in_clinvar": false,
+    "clinvar_id": null,
+    "clinical_significance": "Not in ClinVar"
+  },
+  {
+    "chrom": "chr17",
+    "pos": 41241568,
+    "ref": "t",
+    "alt": "tC",
+    "qual": 228.149,
+    "type": "INDEL",
+    "in_clinvar": false,
+    "clinvar_id": null,
+    "clinical_significance": "Not in ClinVar"
+  },
+  {
+    "chrom": "chr17",
+    "pos": 41243502,
+    "ref": "G",
+    "alt": "A",
+    "qual": 225.421,
+    "type": "SNP",
+    "in_clinvar": false,
+    "clinvar_id": null,
+    "clinical_significance": "Not in ClinVar"
+  },
+  {
+    "chrom": "chr17",
+    "pos": 41243575,
+    "ref": "TC",
+    "alt": "T",
+    "qual": 228.363,
+    "type": "INDEL",
+    "in_clinvar": false,
+    "clinvar_id": null,
+    "clinical_significance": "Not in ClinVar"
+  },
+  {
+    "chrom": "chr17",
+    "pos": 41243615,
+    "ref": "GTTT",
+    "alt": "GTT",
+    "qual": 228.331,
+    "type": "INDEL",
+    "in_clinvar": false,
+    "clinvar_id": null,
+    "clinical_significance": "Not in ClinVar"
+  },
+  {
+    "chrom": "chr17",
+    "pos": 41243834,
+    "ref": "AGGTATATTG",
+    "alt": "AG",
+    "qual": 228.281,
+    "type": "INDEL",
+    "in_clinvar": false,
+    "clinvar_id": null,
+    "clinical_significance": "Not in ClinVar"
+  },
+  {
+    "chrom": "chr17",
+    "pos": 41243836,
+    "ref": "G",
+    "alt": "T",
+    "qual": 4.85942,
+    "type": "SNP",
+    "in_clinvar": false,
+    "clinvar_id": null,
+    "clinical_significance": "Not in ClinVar"
+  },
+  {
+    "chrom": "chr17",
+    "pos": 41244213,
+    "ref": "TCTTGCTT",
+    "alt": "TCTT",
+    "qual": 228.308,
+    "type": "INDEL",
+    "in_clinvar": false,
+    "clinvar_id": null,
+    "clinical_significance": "Not in ClinVar"
+  },
+  {
+    "chrom": "chr17",
+    "pos": 41244366,
+    "ref": "ATTT",
+    "alt": "ATT",
+    "qual": 228.302,
+    "type": "INDEL",
+    "in_clinvar": false,
+    "clinvar_id": null,
+    "clinical_significance": "Not in ClinVar"
+  },
+  {
+    "chrom": "chr17",
+    "pos": 41244369,
+    "ref": "T",
+    "alt": "G",
+    "qual": 228.414,
+    "type": "SNP",
+    "in_clinvar": false,
+    "clinvar_id": null,
+    "clinical_significance": "Not in ClinVar"
+  },
+  {
+    "chrom": "chr17",
+    "pos": 41244986,
+    "ref": "AGC",
+    "alt": "AGCGC",
+    "qual": 228.317,
+    "type": "INDEL",
+    "in_clinvar": false,
+    "clinvar_id": null,
+    "clinical_significance": "Not in ClinVar"
+  },
+  {
+    "chrom": "chr17",
+    "pos": 41245074,
+    "ref": "T",
+    "alt": "A",
+    "qual": 225.417,
+    "type": "SNP",
+    "in_clinvar": false,
+    "clinvar_id": null,
+    "clinical_significance": "Not in ClinVar"
+  },
+  {
+    "chrom": "chr17",
+    "pos": 41245815,
+    "ref": "G",
+    "alt": "T",
+    "qual": 225.422,
+    "type": "SNP",
+    "in_clinvar": false,
+    "clinvar_id": null,
+    "clinical_significance": "Not in ClinVar"
+  }
+]
