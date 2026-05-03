@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 Plot Generator Module
 Generates: Manhattan Plot + Heatmap + Circos Plot
@@ -43,7 +42,13 @@ def parse_vcf(vcf_file):
 
 
 def manhattan_plot(vcf_file, output_dir, sample_name):
-    """Generate Manhattan plot"""
+    """Generate Manhattan plot
+    - x-axis -> position on chr17.
+    - y-axis -> quality score
+    النقط العالية بتكون بنسبة كبيرة حقيقية مش نويز
+    ولو كلاستر متجمع عنده نقط كتير بعتبره هوت سبوت
+
+    """
     positions, qualities, types, _, _ = parse_vcf(vcf_file)
 
     if not positions:
@@ -88,6 +93,7 @@ def manhattan_plot(vcf_file, output_dir, sample_name):
     print(f"   Manhattan Plot: {output_file}")
 
 
+# ال heatmap متقسمة ل Histogram وDensity + خطوط و Base Substitution
 def mutation_heatmap(vcf_file, output_dir, sample_name):
     """Generate heatmap-style plot"""
     positions, qualities, types, ref_bases, alt_bases = parse_vcf(vcf_file)
@@ -109,6 +115,7 @@ def mutation_heatmap(vcf_file, output_dir, sample_name):
     ax1.set_xticklabels([])
 
     # Plot 2: Strip plot with density
+    # خيوط كتير-> منطقة غنية ميوتيشن
     ax2 = axes[1]
     hist, bin_edges = np.histogram(positions, bins=80)
     max_density = hist.max() if hist.max() > 0 else 1
@@ -139,6 +146,7 @@ def mutation_heatmap(vcf_file, output_dir, sample_name):
     ], loc='upper right')
 
     # Plot 3: Base change frequencies
+    # لو نوع من التغيرات السينجل متكرر جدا بتبقا دلالة ع مرض معين
     ax3 = axes[2]
     base_changes = Counter()
     for i, t in enumerate(types):
